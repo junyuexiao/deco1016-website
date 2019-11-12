@@ -140,6 +140,36 @@
         font-size: 15px; 
         font-weight: bold;
       }
+      .text-content {
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, .8);
+      }
+      .loan{ /* Loan page background */
+      background: url("assets/loan.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+    
+    .financial { /* financial page background  */
+      background: url("assets/fwb-score-introduction-desktop.png") no-repeat 50% 50% !important;
+      background-size: cover !important;
+    }
+
+    .pay { /* pay page background  */
+      background: url("assets/tap-and-pay_lghero.jpg") no-repeat 50% 50% !important;
+      background-size: cover !important;
+    }
+
+    .insurance { /* pay page background  */
+      background: url("assets/man-looking-at-smartwatch_50split_l.jpg") no-repeat 50% 50% !important;
+      background-size: cover !important;
+    }
+    #signup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
     }
   </style>
 </head>
@@ -243,25 +273,29 @@
   <section class="loan">
 
     <!-- loan page text-->
-    <h2>"loan"</h2>
+    
+      <div class="text-content">
+        <h2>"loan"</h2>
     <div class="bg"></div>
-      <div class="text">
-        <h2>Understanding bridging finance</h2>
-        <p>Found the perfect new home? A Bridging Loan covers the time between buying a new property and settling on the sale of your existing one.</p>
-        <p>All CommBank bridging loans have a set loan term of 12 months. </p>
-          <h2>Extra Home Loan</h2>
-          <p>A home loan with a low interest rate, low fees and flexible features.</p>
-          <h4>3.22%PA</h4>
-          Variable interest rate (with discount margin offer)
-          <h4>3.23%PA</h4>
-          <div class="nkow-more">Know more</div>
+        <div class="text">
+          <h2>Understanding bridging finance</h2>
+          <p>Found the perfect new home? A Bridging Loan covers the time between buying a new property and settling on the sale of your existing one.</p>
+          <p>All CommBank bridging loans have a set loan term of 12 months. </p>
+            <h2>Extra Home Loan</h2>
+            <p>A home loan with a low interest rate, low fees and flexible features.</p>
+            <h4>3.22%PA</h4>
+            Variable interest rate (with discount margin offer)
+            <h4>3.23%PA</h4>
+            <div class="nkow-more">Know more</div>
+        </div>
       </div>
 
   </section>
   <a name="Financial"></a>
   <section class="financial">
     <!-- finacial page text -->
-    <h2>"financial"</h2>
+    <div class="text-content">
+      <h2>"financial"</h2>
     <div class="bg"></div>
     <div class="text">
        <h1>Learn more about your financial wellbeing</h1><br>
@@ -273,11 +307,13 @@
         <h5>One Day – reaching your financial goals, making the most of your money and setting up your future.</h5>
         <div class="nkow-more">Know more</div>
     </div>
+    </div>
   </section>
   <a name="Pay"></a>
   <section class="pay">
     <!-- pay page text-->
-    <h2>"pay"</h2>
+    <div class="text-content">
+      <h2>"pay"</h2>
     <div class="bg"></div>
     <div class="text">
       <h1>Quick. Easy. Secure.</h1><br>
@@ -288,11 +324,13 @@
       <h5>Our 100% security guarantee protects you from unauthorised transactions on personal and business accounts when you protect how you access your accounts and tell us if something is wrong.</h5>
       <div class="nkow-more">Know more</div>
     </div>
+    </div>
   </section>
   <a name="Insurance"></a>
   <section class="insurance">
     <!-- insurance page text -->
-    <h2>"insurance"</h2>
+    <div class="text-content">
+      <h2>"insurance"</h2>
     <div class="bg"></div>
     <div class="text">
         <h1>Travel insurance</h1></br>
@@ -303,6 +341,7 @@
         <br>
         <h5>Understanding the details of personal insurance cover such as life and income protection can often be complex. A financial planner can review your situation and provide guidance on all your personal insurance options, including the type and level of cover that is right for you. They can also look at strategies to help grow and protect your wealth. Tell me more.</h5>
         <div class="nkow-more">Know more</div>
+    </div>
     </div>
   </section>
   <section class="footer">

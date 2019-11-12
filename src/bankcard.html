@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../views/bgroot.css">
   <link rel="stylesheet" href="../views/choose.css">
   <style>
-    .a-c {  /* a-c display height...*/
+    .a-c {
       display: inline-block;
       height: 40px;
       overflow: hidden;
@@ -19,15 +19,28 @@
       width: 50% ;
     }
 
-    .a-c:hover { /* a-c hover */
+    .a-c:hover {
       height: 350px !important;
       border-bottom: 2px solid #f3d330;
+    }
+    @media (max-width: 790px) {
+      form {
+        width: 100vw;
+        margin: 0 0 0px 20px;
+        
+      }
+     
+      section {
+        padding: 0px 0px 40px 0;
+      }
+      .a-c:hover {
+        min-width: 100% !important;
+      }
     }
   </style>
   <title>Document</title>
 </head>
 <body>
-  <!--Tips-->
   <section class="container">
     <div class="title">Do you have bank card?</div>
     <div class="choose">
@@ -36,7 +49,6 @@
       <div class="a-c">NO <br>You must get a bank card at first<br><input type="checkbox">1. credit card <br/>&nbsp;&nbsp;&nbsp;· you must over 18 <br/>&nbsp;&nbsp;&nbsp;· you must have a stable job <br/><input type="checkbox">2. saving card<br/><br><a href="getbakcard.html">confirm</a></div>
     </div>  
   </section>
-  <!--Video insertion-->
   <div class="video-container">
     <video preload="auto" autoplay="" muted="" loop="" class="video">
       <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.mp4" type="video/mp4">
