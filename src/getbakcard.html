@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../views/bgroot.css">>
+  <link rel="stylesheet" href="../views/choose.css">> <!-- css quote-->
+  
+  <title>Document</title>
+  <style>
+    body {
+      width: 100vw !important;
+      height: 100vh !important;
+      overflow: hidden !important;
+    }
+    form {
+      padding: 0 60px;
+    }
+    form h2 {
+      color: #fed330;
+      text-align: center;
+      
+    }
+    form label {
+      color: #fed330;
+      font-weight: lighter;
+      margin-bottom: 40px;
+    }
+
+    form h3 {
+      color: #fed330;
+      font-weight: bolder;
+    }
+
+    form .gender-container {
+      display: flex;
+    }
+
+    form span {
+      display: inline-block;
+      color: #fed330;
+      margin-right: 20px;
+      border: 1px solid #fed330;
+      padding: 5px 30px;
+      cursor: pointer;
+      transition: .5s all;
+    }
+
+    .genderon {
+      color: #000 !important;
+      background: #fed330 !important;
+    }
+
+    form input {
+      background: none;
+      border: none;
+      border: 1px solid #fed330;
+      width: 200px;
+      outline: none;
+      color: sandybrown;
+      height: 26px;
+      transition: .5s all;
+    }
+    form input:hover {
+      width: 300px;
+      background: none;
+    }
+
+    form button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: none;
+      border: 1px solid #fed330;
+      color: sandybrown;
+      cursor: pointer;
+      transition: .5s all;
+    }
+    form button:hover {
+      color: #000;
+      background: #fed330;
+    }
+
+
+    #name:hover {
+      width: 100px !important;
+    }
+
+    .a-upload {
+      color: #fed330;
+      border: 1px solid#fed330;
+      padding: 4px;
+      padding-bottom: 0px;
+      transition: .4s all;
+    }
+    .a-upload:hover {
+      background: #fed330;
+      color: #000;
+      box-shadow: 3px 3px 3px #fed330;
+    }
+    .text-show {
+      color: #fed330;
+      display: none;
+    }
+
+    .steps {
+      width: 500px;
+      height: 400px;
+      position: absolute;
+      top: 150px;
+      right: 100px;
+    }
+
+    .steps li {
+      list-style: none;
+      font-size: 17px;
+      color: #ccc;
+      margin: 50px 100px;
+      font-weight: lighter;
+    }
+    .stpes li a {
+      color: #ccc;
+    }
+    .now {
+      font-weight: bold !important;
+      color: #fed330 !important;
+    }
+    @media (max-width: 600px) {
+
+      form {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      span {
+        padding: 5px 10px!important;
+        text-align: center;
+
+      }
+      #upa {
+        font-size: 16px !important;
+        font-weight: lighter;
+      }
+      button {
+        left: 100px;
+      }
+      input:hover {
+        width: 200px !important;
+        background: none;
+      }
+      .steps {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="regist.html" class="container">
+    <br><br>
+    <h2>Get Bank card now</h2>
+    <br><br>
+    <label for="nema">First name</label>
+    <input type="text" required id="name" style="width: 50px; border: none; border-bottom:1px solid #fed330; background: none;">
+    <label for="name">Middle name</label>
+    <input type="text" required id="name" style="width: 50px; border: none; border-bottom:1px solid #fed330 ;background: none;">
+    <label for="name">Last name</label>
+    <input type="text" required id="name" style="width: 50px; border: none; border-bottom:1px solid #fed330 ;background: none;"><br><br>
+    <label for="gender">Please choose your title</label><br><br>
+    <div class="gender-container">
+        <span class="gender">mr</span><span class="gender">ms</span><span class="gender">mrs</span><span class="gender">miss</span>
+    </div>
+    <br><br>
+    <label for="birth">Your birthday</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" class="birthday" required><br><br>
+    <h3>Address</h3>
+    <br>
+    <label for="address">Districe</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="address" required><br><br>
+    <label for="address">The city</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="address" required><br><br>
+    <label for="address">Contries</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="address" required><br><br>
+    <label for="address">passport</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <a href="javascript:;" class="a-upload" id="upa">Please upload scan file</a><br><br>
+    <label for="birth">Your Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="email" class="birthday" required><br><br>
+    <h4 class="text-show"></h4>
+    <button type="submit">submit</button>
+    <ul class="steps">
+      <li class="now"><a href="getbakcard.html" style="color: #fed330;" >Get a bank card</a></li>
+      <li><a href="regist.html" style="color: #ccc;">Regist our menber</a></li>
+      <li><a href="scs.html"  style="color: #ccc;">Success</a></li>
+      <li><a href="exp.html" style="color: #ccc;">Explore</a></li>
+    </ul>
+  </form>
+
+
+  <div class="video-container">
+    <video preload="auto" autoplay="" muted="" loop="" class="video">
+      <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.mp4" type="video/mp4">
+      <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.webm" type="video/webm">
+    </video>  
+  </div>
+  <script src="../components/tools.js"></script>
+  <script>
+    let btn1 = document.querySelectorAll('span')[0]
+    btn1.onclick = function() {
+      toggleClass(this, 'genderon')
+    }
+    let btn2 = document.querySelectorAll('span')[1]
+    btn2.onclick = function() {
+      toggleClass(this, 'genderon')
+    }
+    let btn3 = document.querySelectorAll('span')[2]
+    btn3.onclick = function() {
+      toggleClass(this, 'genderon')
+    }
+    let btn4 = document.querySelectorAll('span')[3]
+    btn4.onclick = function() {
+      toggleClass(this, 'genderon')
+    }
+     let showBtn = document.querySelectorAll('.a-upload')[0]
+     let textShow = document.querySelectorAll('.text-show')[0]
+     showBtn.onclick = function () {
+      fadeIn(textShow, 80, 6000)
+     }
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../views/bgroot.css">
+  <link rel="stylesheet" href="../views/choose.css">
+  <link rel="stylesheet" href="../views/choosecard.css">
+  <title>Document</title>
+  <style>
+    @media (max-width:920px) {
+    input {
+      margin-left: -20px;
+    }
+    #btn {
+      width: 80vw !important;
+    }
+   }
+  </style>
+</head>
+<body>
+  <!-- Video insertion -->
+  <div class="video-container">
+  <section class="container">
+    <form action="regist.html" class="creadit">
+      <label for="crc">Enter your credit card number</label><br>
+      <input type="text" style="width: 60%; margin-right: 40px;" required><input type="text" style="width: 100px; border: 1px solid #000;" placeholder="PIN"><br><br><br>
+      <input id="btn" type="button" class="timerclick" value="GET VERIFICATION CODE" style="width: 400px; margin-right: 80px;"/>&nbsp;&nbsp;&nbsp;
+      <input type="text" style="width: 250px; border: 1px solid #000;" placeholder="Received mobile phone verification code"><br><br><br><br>
+      <button type="submit">Binding</button>
+    </form>
+  </section>
+  <video preload="auto" autoplay="" muted="" loop="" class="video">
+    <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.mp4" type="video/mp4">
+    <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.webm" type="video/webm">
+  </video>  
+  </div>
+  <script src="../components/tools.js"></script>  
+  <script>
+  let createdPage = document.querySelectorAll('.creadit')[0]
+  let cashPage = document.querySelectorAll('.cash')[0]
+  
+  let creaditBtn = document.querySelectorAll('.credit-btn')[0]
+  let cashBtn = document.querySelectorAll('.cash-btn')[0]
+  
+  let wait=60;
+    function time(o) {
+        if (wait == 0) {
+            o.removeAttribute("disabled");
+            o.value="Get verification code for free";
+            wait = 60;
+        } else {
+            o.setAttribute("disabled", true);
+            o.value="To resend(" + wait + ")";
+            wait--;
+            setTimeout(function() {
+                    time(o)
+            }, 1000)
+        }
+    }
+    document.getElementById("btn").onclick=function(){time(this);}
+  </script>
+</body>
+</html>

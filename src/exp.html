@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../views/bgroot.css">>
+  <link rel="stylesheet" href="../views/choose.css">>
+  
+  <title>Document</title>
+  <style>
+    body {
+      width: 100vw !important;
+      height: 100vh !important;
+      overflow: hidden !important;
+    }
+    form {
+      padding: 0 60px;
+    }
+    form h2 {
+      color: #fed330;
+      text-align: center;
+      
+    }
+    form a {
+      color: #f3d330;
+      font-weight: lighter;
+      display: block;
+      transition: .5s;
+      width: 200px;
+      margin: 20px 0;
+    }
+
+    form a:hover {
+      border-bottom: 2px solid #f3d330;
+    }
+    .steps {
+      width: 500px;
+      height: 400px;
+      position: absolute;
+      top: 150px;
+      right: 100px;
+    }
+
+    .steps li {
+      list-style: none;
+      font-size: 17px;
+      color: #ccc;
+      margin: 50px 100px;
+      font-weight: lighter;
+    }
+
+    .stpes li a {
+      color: #ccc;
+    }
+
+    .now {
+      font-weight: bold !important;
+      color: #fed330 !important;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .service h3 {
+      float: 1px;
+    }
+
+    .service-img {
+      width: 600px;
+      height: 200px;
+    }
+
+    .s-m-1 {
+      background: url("../assets/home1.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+    .s-m-2 {
+      background: url("../assets/home2.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    @media (max-width: 600px) {
+
+      form {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      span {
+        padding: 5px 10px!important;
+        text-align: center;
+
+      }
+      #upa {
+        font-size: 16px !important;
+        font-weight: lighter;
+      }
+      button {
+        left: 100px;
+      }
+      input:hover {
+        width: 200px !important;
+        background: none;
+      }
+      .steps {
+        display: none;
+      }
+      .service a {
+        font-size: 12px !important; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="exp.html" class="container">
+    <br><br>
+    <h2>Now, you can:</h2>
+    <br><br>
+
+    <div class="service">
+      <h3><a href="indexme.html">BACK TO THE HOME PAGE</a></h3> <!-- indexme jump-->
+      <h3><a href="indexme.html">Financial</a></h3> <!-- indexme jump-->
+      <h3><a href="indexme.html">Loan</a></h3><!-- indexme jump-->
+      <h3><a href="indexme.html">Pay</a></h3><!-- indexme jump-->
+      <h3><a href="indexme.html">Insurance</a></h3><!-- indexme jump-->
+    </div>
+
+    <div class="service-img s-m-1"></div>
+    <div class="service-img s-m-2"></div>
+    <ul class="steps">
+        <li class="now"><a href="getbakcard.html" style="color: #ccc;">Get a bank card</a></li> <!-- getbakcare page jump-->
+        <li><a href="regist.html" style="color: #ccc;">Regist our menber</a></li> <!-- regist page jump -->
+        <li><a href="scs.html"  style="color: #ccc;">Success</a></li>  <!-- scs page jump-->
+        <li><a href="exp.html"  style="color: #fed330;">Explore</a></li> <!-- exp page jump-->
+    </ul>
+  </form>
+
+<!-- Video insertion -->
+  <div class="video-container">
+    <video preload="auto" autoplay="" muted="" loop="" class="video">
+      <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.mp4" type="video/mp4">
+      <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.webm" type="video/webm">
+    </video>  
+  </div>
+  <script>
+  </script>
+</body>
+</html>

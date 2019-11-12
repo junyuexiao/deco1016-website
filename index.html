@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- icon -->
+  <script src="https://kit.fontawesome.com/987157c625.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="views/index.css">
+  <title>commonbank</title>
+  <style>
+    .footer {  /*Footer style*/
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      color: burlywood;
+      width: 100%;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+    .footer div { /* footer div*/
+      flex: 1 !important;
+      font-size: 12px !important;
+      padding: 0 30px;
+    }
+    .text { /* text styel*/
+      width: 50vw;
+      float: right;
+      font-size: 14px;
+      margin-right: 100px;
+      font-weight: lighter;
+      color:#f6b93b;
+      letter-spacing: 2px;
+    }
+    .serch-bar input { /* serach box*/
+      background: none;
+      border: 1px solid #f6b93b;
+      height: 40px;
+      width: 400px;
+    }
+
+    .serch-bar button { /*search button style*/
+      background: none;
+      height: 40px;
+      border: 1px solid #f6b93b;
+      color: #f6b93b;
+      position: relative;
+      top: -40px;
+      right: -400px;
+    }
+
+    section .bg { /*Background style*/
+      width: 500px;
+      height: 400px;
+      position: absolute;
+      left: 20px;
+    }
+    .loan .bg { /* Loan page background */
+      background: url("assets/loan.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+    
+    .financial .bg { /* financial page background  */
+      background: url("assets/fwb-score-introduction-desktop.png") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    .pay .bg { /* pay page background  */
+      background: url("assets/tap-and-pay_lghero.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    .insurance .bg { /* pay page background  */
+      background: url("assets/man-looking-at-smartwatch_50split_l.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    section .nkow-more { /*section*/
+      width: 120px;
+      height: 40px;
+      padding: 5px;
+      cursor: pointer;
+      border: 1px solid #f6b93b;
+      line-height: 40px;
+      text-align: center;
+      margin-top: 13px;
+      transition: .4s all;
+    }
+    section .nkow-more:hover {  /*section color*/
+      color: #fff;
+      background: #f6b93b;
+    }
+    #signup {  /*signup page style*/
+      display: block;
+      position: absolute;
+      left: 90%;
+      top: 70%;
+      width: 100px;
+      height: 40px;
+      border: 2px solid #f6b93b;
+      transform: translate(-50%,-50%);
+      z-index: 999;
+      text-align: center;
+      line-height: 40px;
+      font-size: 24px;
+      color: #000;
+      background: #f6b93b;
+      border-radius: 10px;
+      box-shadow: 6px 6px 6px #000;
+      transition: .5s all;
+    }
+    #signup:hover {  
+      box-shadow: 2px 2px 2px #000;
+    }
+    .hover {  /*hover bg*/
+      width: 100px;
+      height: 100px;
+      background: url("assets/qrcode.jpg") no-repeat 50% 50%;
+      background-size: cover;
+      margin: 40px auto 0 auto;
+    }
+    @media (max-width: 690px) {
+      .serch-bar input {
+      width: 300px;
+    }
+      .serch-bar button { /* button*/
+        right: -300px !important;
+      }
+      .bg {
+        display: none;
+      }
+      section {
+        padding: none !important;
+      }
+      section .text {  /*text size*/
+        font-size: 12px;
+      }
+      section .text h2 { /*section h2 size*/
+        font-size: 15px; 
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="nav-bar ">
+    <nav>
+
+      <div class="nav">
+        <!-- Navigation bar -->
+      <span id="Yewei">
+        <a href="index.html">COMMONBANK</a>
+      </span>
+      <ul id="menu">
+          <li><a href="#">Home</a></li> <!-- Navigation bar name-->
+        <li><a href="#loan">Loan</a></li>
+        <li><a href="#Financial">Financial</a></li>
+        <li><a href="#Pay">Pay</a></li>
+        <li><a href="#Insurance">Insurance</a></li>
+      </ul>
+      <div id="toggle">
+        <div class="span" id="one"></div>
+        <div class="span" id="two"></div>
+        <div class="span" id="three"></div>
+      </div>
+      
+      </div>
+      <div id="resize">
+        <ul id="menu">
+          <li><a href="#">Home</a></li><!-- Navigation bar name-->
+
+          <li><a href="#">Loan</a></li>
+          <li><a href="#">Finaancial</a></li>
+          <li><a href="#">Pay</a></li>
+          <li><a href="#">Insurance</a></li>>
+        </ul>
+      </div>
+      <!-- Login button -->
+      <div class="login">
+        <h4>log in</h4>
+        <i class="fas fa-sign-in-alt"></i>
+      </div>
+
+      <a href="src/bankcard.html" id="signup">Sign up</a> <!-- Registration page Jump -->
+    
+      <div class="frontpage">
+        <form action="index.html" class="login-form"> <!-- login -->
+          <h1>Log in</h1>
+  
+          <div class="txtb">
+            <input type="text" class="login-input" required>    <!-- Account input box -->
+            <span data-placeholder="Username"></span>
+          </div>
+  
+          <div class="txtb">
+            <input type="password" class="login-input" required> <!-- Password input box-->
+            <span data-placeholder="Password"></span>
+          </div>
+  
+          <input type="submit" class="logbtn" value="Login"> <!-- login button-->
+  
+          
+          <div class="qrcode"></div><div class="bottom-text" style="margin-top: 0px;">qr-code log in <br>(Scan the code with the app)</div>
+          <div class="bottom-text">
+              Don't have account? <a href="src/bankcard.html" style="color: #ccc; font-weight: bold;font-size: 15px;">Sign up</a> <!-- jump -->
+            </div>
+        </form>
+        </div>
+        
+        <div class="slider">
+          <div class="slides">
+            <div class="slide">
+              <img src="assets/home1.jpg" alt=""> <!--Insert home page rotation chart 1 -->
+            </div>
+        
+            <div class="slide">
+              <img src="assets/home2.jpg" alt=""> <!--Insert home page rotation chart 2 -->
+            </div>
+        
+            <div class="slide">
+              <img src="assets/home3.jpg" alt=""> <!--Insert home page rotation chart 3 -->
+            </div>
+        
+            <div class="slide">
+              <img src="assets/home1.jpg" alt=""><!--Insert home page rotation chart 1 -->
+            </div>
+          </div>
+          <div onclick="goLeft()" class="btnLeft fas fa-chevron-left"></div>
+          <div onclick="goRight()" class="btnRight fas fa-chevron-right"></div>
+        </div>
+          
+      </nav>
+      <!-- Home video insert-->
+      <div class="video-container">
+      <video preload="auto" autoplay="" muted="" loop="" class="video">
+        <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.mp4" type="video/mp4">
+        <source src="https://rivo.agency/wp-content/uploads/2018/05/Office-Day.webm" type="video/webm">
+      </video>  
+     </div>
+  </section>
+  <a name="loan"></a>
+  <section class="loan">
+
+    <!-- loan page text-->
+    <h2>"loan"</h2>
+    <div class="bg"></div>
+      <div class="text">
+        <h2>Understanding bridging finance</h2>
+        <p>Found the perfect new home? A Bridging Loan covers the time between buying a new property and settling on the sale of your existing one.</p>
+        <p>All CommBank bridging loans have a set loan term of 12 months. </p>
+          <h2>Extra Home Loan</h2>
+          <p>A home loan with a low interest rate, low fees and flexible features.</p>
+          <h4>3.22%PA</h4>
+          Variable interest rate (with discount margin offer)
+          <h4>3.23%PA</h4>
+          <div class="nkow-more">Know more</div>
+      </div>
+
+  </section>
+  <a name="Financial"></a>
+  <section class="financial">
+    <!-- finacial page text -->
+    <h2>"financial"</h2>
+    <div class="bg"></div>
+    <div class="text">
+       <h1>Learn more about your financial wellbeing</h1><br>
+       <h5>Get a better understanding of your financial wellbeing so you can take steps to improve it, whether it’s taking control of your finances, handling an unexpected expense or reaching your future goals.</h5></br>
+        <h1>What is financial wellbeing?</h1></br>
+        <h5>It’s how you manage your money both now and for the future, so you’re in control of your financial goals and prepared for the unexpected. We think of it in 3 categories:</h5>
+        <h5>Every Day – managing your day-to-day finances like rent or mortgage, transport costs and bills;</h5>
+        <h5>Rainy Day – being ready to deal with the unexpected, and having an emergency fund just in case;</h5>
+        <h5>One Day – reaching your financial goals, making the most of your money and setting up your future.</h5>
+        <div class="nkow-more">Know more</div>
+    </div>
+  </section>
+  <a name="Pay"></a>
+  <section class="pay">
+    <!-- pay page text-->
+    <h2>"pay"</h2>
+    <div class="bg"></div>
+    <div class="text">
+      <h1>Quick. Easy. Secure.</h1><br>
+      <h5>Pay on the go in store, without cash or cards. Use your phone to tap for purchases under $100.</h5>
+      <h5>Over $100? Tap, you may need to enter your PIN depending on the terminal.</h5>
+      <h5>An embedded near-field communication (NFC) chip transmits your card's info wirelessly, so you can pay from your eligible CommBank debit or credit card1 in the CommBank app with your Android phone. </h5></br>
+      <h1>Backed by our 100% security guarantee</h1><br>
+      <h5>Our 100% security guarantee protects you from unauthorised transactions on personal and business accounts when you protect how you access your accounts and tell us if something is wrong.</h5>
+      <div class="nkow-more">Know more</div>
+    </div>
+  </section>
+  <a name="Insurance"></a>
+  <section class="insurance">
+    <!-- insurance page text -->
+    <h2>"insurance"</h2>
+    <div class="bg"></div>
+    <div class="text">
+        <h1>Travel insurance</h1></br>
+        <h5>Purchase a CBA Travel Insurance plan (provided by Cover-More), available for overseas and domestic trips.</h5>
+        <h5>Alternatively, activate your international travel insurance included with CommBank Gold, Platinum and Diamond credit cards</h5>
+        <br>
+        <h1>Protect yourself, your family and your lifestyle</h1>
+        <br>
+        <h5>Understanding the details of personal insurance cover such as life and income protection can often be complex. A financial planner can review your situation and provide guidance on all your personal insurance options, including the type and level of cover that is right for you. They can also look at strategies to help grow and protect your wealth. Tell me more.</h5>
+        <div class="nkow-more">Know more</div>
+    </div>
+  </section>
+  <section class="footer">
+    <div>
+      <!-- Contact information at the end of the page-->
+      <h1>General enquiries<h1>
+      <p>Call 13 2221 - 6am to 10pm</p>
+      <p>Overseas? Call +61 2 9999 3283</p>
+
+  </div>
+
+  <div class="serch-bar">
+    <form action="" method="post">
+      <input type="search" name="" autocomplete="off"> <!--autocomplete Prompt-->
+      <button class="serchbtn" type="button">Search</button>  <!-- Submit button -->
+    </form>
+    
+  </div>
+
+    <div>
+      <p>Say Hello</p>
+      <h4>Call 13 2221</h4>
+
+    <br><br>
+  </div>
+  </section>
+  <main></main>
+  <footer></footer>
+  <script src="components/tools.js"></script>
+  <script>
+ //Navigation bar color change 
+
+    let nav = document.querySelectorAll('.nav')[0]
+    let opacity = 0
+    window.onscroll = function() {
+      let ttop = document.documentElement.scrollTop
+      if(ttop > 100) {
+        opacity = 0.9
+      }else{
+        opacity = ttop/100
+      }
+      nav.style.backgroundColor = 'rgba(0,0,0,'+opacity+')'
+    }  
+  
+    // Landing window
+    let login = document.querySelectorAll('.login')[0]
+    let frontpage = document.querySelectorAll('.frontpage')[0]
+    login.onclick = function() {
+      toggleClass(frontpage, "frontpage-show")
+    }
+
+    // Form animation
+    let loginInpu = document.querySelectorAll('.login-input')[0]
+    loginInpu.onfocus = function() {       
+        this.setAttribute("class", "focus");   
+        this.classList.add("focus");
+    }
+    loginInpu.onblur = function() {
+      if(this.value == ""){
+        this.classList.remove("focus");
+      }
+    }
+
+    let loginInput = document.querySelectorAll('.login-input')[1]
+    loginInput.onfocus = function() {       
+        this.setAttribute("class", "focus");   
+        this.classList.add("focus");
+    }
+    loginInput.onblur = function() {
+      if(this.value == ""){
+        this.classList.remove("focus");
+      }
+    }
+
+    // Rotation chart
+    let slides = document.getElementsByClassName("slide");
+    let index = 0;
+    function goLeft() {
+      if(index == 0) index = slides.length - 1;
+      else index--;
+
+      slides[0].style.marginLeft = "-" + index * 1200 + "px";
+    }
+    function goRight() {
+      if(index == slides.length -1) index = 0;
+      else index++;
+
+      slides[0].style.marginLeft = "-" + index * 1200 + "px";
+    }
+
+    // Hamburg button
+    let bubtn = document.querySelectorAll('#toggle')[0]
+    let frontPageShow = document.getElementById('resize')
+    bubtn.onclick = function() {
+      toggleClass(this, "on")
+      toggleClass(frontPageShow, "active")
+    }
+
+
+  </script>
+</body>
+</html>
